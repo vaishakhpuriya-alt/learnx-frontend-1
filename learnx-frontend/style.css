@@ -1,4 +1,3 @@
-/* ================= RESET ================= */
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +5,6 @@
   font-family: 'Segoe UI', sans-serif;
 }
 
-/* ================= BODY ================= */
 body {
   min-height: 100vh;
   background-color: #f4f6f9;
@@ -20,7 +18,6 @@ background-repeat: no-repeat;
   align-items: center;
 }
 
-/* ================= NAVBAR ================= */
 .navbar {
   position: fixed;
   top: 0;
@@ -51,7 +48,6 @@ background-repeat: no-repeat;
   color: #fbbf24;
 }
 
-/* ================= QUIZ CARD ================= */
 .quiz-container {
   width: 420px;
   background: #ffffff;
@@ -63,12 +59,10 @@ background-repeat: no-repeat;
   animation: fadeIn 0.4s ease-in-out;
 }
 
-/* ================= HEADINGS ================= */
 h2 {
   margin-bottom: 20px;
 }
 
-/* ================= INPUT ================= */
 input {
   width: 100%;
   padding: 12px;
@@ -78,7 +72,6 @@ input {
   font-size: 14px;
 }
 
-/* ================= BUTTONS ================= */
 button {
   padding: 12px;
   border-radius: 8px;
@@ -88,7 +81,6 @@ button {
   transition: 0.3s;
 }
 
-/* Start & Next Button */
 #startBtn,
 #nextBtn {
   width: 100%;
@@ -101,7 +93,6 @@ button {
   background: #1d4ed8;
 }
 
-/* ================= OPTIONS ================= */
 .option {
   display: block;
   width: 100%;
@@ -120,7 +111,6 @@ button {
   color: white;
 }
 
-/* Correct & Wrong Colors */
 .correct {
   background-color: #22c55e !important;
   color: white !important;
@@ -131,7 +121,6 @@ button {
   color: white !important;
 }
 
-/* ================= PROGRESS BAR ================= */
 .progress-bar {
   height: 8px;
   background: #e5e7eb;
@@ -147,7 +136,6 @@ button {
   transition: width 0.3s ease;
 }
 
-/* ================= TABLE (Leaderboard) ================= */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -165,7 +153,6 @@ td {
   border-bottom: 1px solid #e5e7eb;
 }
 
-/* ================= ANIMATION ================= */
 @keyframes fadeIn {
   from {
     opacity: 0;
