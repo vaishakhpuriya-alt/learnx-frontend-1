@@ -1,168 +1,67 @@
-# 🎮 LearnX – Gamified Learning and Quiz Platform
+🎮 LearnX – Gamified Learning & Quiz Platform
 
-## 📌 Hackathon Project – HC-303
+🚀 Live Demo:
+👉 https://stalwart-medovik-7b0f0d.netlify.app/
 
-LearnX is an interactive gamified learning platform that enhances student engagement through quizzes, leaderboards, and performance analytics.
+📌 Project Overview
 
----
+LearnX is a gamified learning platform built to improve student engagement through:
 
-## 🚀 Features
+🧠 Interactive quizzes
 
-### 👨‍🎓 Student Features
-- Start quiz with username
-- Real-time question loading from backend
-- Instant answer validation
-- Progress bar tracking
-- Final score display
-- Leaderboard ranking
-- Performance stored for analytics
+🏆 Leaderboards
 
-### 👩‍🏫 Teacher Features
-- View total quiz attempts
-- Check average score
-- Track best score
-- View recent attempts
-- Monitor student engagement
+📊 Teacher analytics dashboard
 
----
+🎯 Adaptive learning logic
 
-## 🏗️ Tech Stack
+💾 Backend-powered API system
 
-### 🔹 Frontend
-- HTML5
-- CSS3
-- JavaScript (Vanilla JS)
-- Fetch API
+This project was developed as part of HC-303 Hackathon.
 
-### 🔹 Backend
-- Node.js
-- Express.js
-- REST APIs
-- JSON Data Handling
+🌐 Live Access
 
----
+Judges can directly open the platform here:
 
-## 📂 Project Structure
+👉 https://stalwart-medovik-7b0f0d.netlify.app/
 
-```
-learnx-project/
-│
-├── learnx-backend/
-│   ├── server.js
-│   ├── package.json
-│   ├── routes/
-│   └── models/
-│
-├── learnx-frontend/
-│   ├── index.html
-│   ├── dashboard.html
-│   ├── leaderboard.html
-│   ├── script.js
-│   └── style.css
-│
-└── .gitignore
-```
+No installation required for demo viewing.
 
----
+🛠 Tech Stack
+Frontend
 
-## 🔗 API Endpoints
+HTML
 
-### Get Quiz Questions
-```
-GET /api/quiz
-```
+CSS
 
-### Submit Quiz Results
-```
-POST /api/results
-```
+JavaScript
 
-### Get All Results (Teacher Dashboard)
-```
-GET /api/results
-```
+Backend
 
----
+Node.js
 
-## ⚙️ How to Run the Project Locally
+Express.js
 
-### 1️⃣ Clone the Repository
+MongoDB
 
-```bash
+JWT Authentication
+
+⚙️ How to Run Locally (For Developers)
+1️⃣ Clone Repository
 git clone <your-repo-url>
 cd learnx-project
-```
 
----
-
-### 2️⃣ Run Backend
-
-```bash
+2️⃣ Run Backend
 cd learnx-backend
 npm install
 npm run dev
-```
+
 
 Backend runs on:
-```
+
 http://localhost:5000
-```
 
----
+👨‍💻 Developer
 
-### 3️⃣ Run Frontend
-
-Open:
-
-```
-learnx-frontend/index.html
-```
-
-in your browser.
-
----
-
-## 🎯 Problem Statement
-
-Traditional learning platforms lack engagement and performance tracking.
-
-LearnX solves this by:
-- Introducing gamified quizzes
-- Creating leaderboard competition
-- Providing teacher analytics
-- Enabling scalable backend architecture
-
----
-
-## 🔮 Future Improvements
-
-- JWT Authentication (Student & Teacher roles)
-- MongoDB Atlas integration
-- Adaptive difficulty algorithm
-- AI-based personalized feedback
-- Graph-based analytics dashboard
-- Cloud deployment (Render / Netlify)
-
----
-
-## 👨‍💻 Role & Contribution
-
-**Backend Developer**
-- Designed REST APIs
-- Built quiz retrieval endpoint
-- Implemented result storage logic
-- Integrated frontend with backend
-- Structured project architecture
-
----
-
-## 📜 License
-
-This project is built for hackathon purposes.
-
----
-
-## ⭐ Conclusion
-
-LearnX transforms traditional static learning into an interactive, competitive, and data-driven experience for both students and teachers.
-
+Backend Lead: Vaishakh
+GitHub: https://github.com/vaishakhpuriya-alt
