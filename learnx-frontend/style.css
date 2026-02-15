@@ -1,0 +1,178 @@
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* ================= BODY ================= */
+body {
+  min-height: 100vh;
+  background-color: #f4f6f9;
+  background-image: url('image1.jpg');
+  background-size: cover;
+  background-position: center;
+background-repeat: no-repeat;
+  padding-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 18px 40px;
+  background: #1e3a8a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.logo {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.nav-links a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #fbbf24;
+}
+
+/* ================= QUIZ CARD ================= */
+.quiz-container {
+  width: 420px;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  text-align: center;
+  color: #1f2937;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+/* ================= HEADINGS ================= */
+h2 {
+  margin-bottom: 20px;
+}
+
+/* ================= INPUT ================= */
+input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+/* ================= BUTTONS ================= */
+button {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+/* Start & Next Button */
+#startBtn,
+#nextBtn {
+  width: 100%;
+  background: #2563eb;
+  color: white;
+}
+
+#startBtn:hover,
+#nextBtn:hover {
+  background: #1d4ed8;
+}
+
+/* ================= OPTIONS ================= */
+.option {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px;
+  background: #e5e7eb;
+  color: #111827;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.option:hover {
+  background: #2563eb;
+  color: white;
+}
+
+/* Correct & Wrong Colors */
+.correct {
+  background-color: #22c55e !important;
+  color: white !important;
+}
+
+.wrong {
+  background-color: #ef4444 !important;
+  color: white !important;
+}
+
+/* ================= PROGRESS BAR ================= */
+.progress-bar {
+  height: 8px;
+  background: #e5e7eb;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  width: 0%;
+  background: #2563eb;
+  transition: width 0.3s ease;
+}
+
+/* ================= TABLE (Leaderboard) ================= */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+th {
+  background: #2563eb;
+  color: white;
+  padding: 10px;
+}
+
+td {
+  padding: 8px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* ================= ANIMATION ================= */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

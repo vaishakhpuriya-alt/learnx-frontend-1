@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="logo">Quiz App</div>
+  <div class="nav-links">
+    <a href="index.html">Quiz</a>
+    <a href="leaderboard.html">Leaderboard</a>
+  </div>
+</nav>
+
+<div class="dashboard-container">
+
+  <h2>📊 Student Dashboard</h2>
+
+  <div class="stats">
+    <div class="card">
+      <h3 id="totalQuizzes">0</h3>
+      <p>Total Attempts</p>
+    </div>
+
+    <div class="card">
+      <h3 id="averageScore">0%</h3>
+      <p>Average Score</p>
+    </div>
+
+    <div class="card">
+      <h3 id="bestScore">0</h3>
+      <p>Best Score</p>
+    </div>
+  </div>
+
+  <h3 style="margin-top:30px;">Recent Attempts</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Score</th>
+      </tr>
+    </thead>
+    <tbody id="attemptTable"></tbody>
+  </table>
+
+</div>
+
+<script>
+  const leaderboard = JSON.parse(localStorage.getItem("leaderboard")) || [];
+
+  const total = leaderboard.length;
+  const best = leaderboard.length > 0 ? Math.max(...leaderboard.map(x => x.score)) : 0;
+  const avg = leaderboard.length > 0
+    ? (leaderboard.reduce((a,b) => a + b.score, 0) / leaderboard.length).toFixed(1)
+    : 0;
+
+  document.getElementById("totalQuizzes").textContent = total;
+  document.getElementById("averageScore").textContent = avg + "%";
+  document.getElementById("bestScore").textContent = best;
+
+  const table = document.getElementById("attemptTable");
+
+  leaderboard.slice(-5).reverse().forEach(entry => {
+    const row = `
+      <tr>
+        <td>${entry.name}</td>
+        <td>${entry.score}</td>
+      </tr>
+    `;
+    table.innerHTML += row;
+  });
+</script>
+
+</body>
+</html>

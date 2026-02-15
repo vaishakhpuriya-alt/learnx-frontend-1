@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Leaderboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="logo">Quiz App</div>
+  <div class="nav-links">
+    <a href="index.html">Quiz</a>
+    <a href="dashboard.html">Dashboard</a>
+  </div>
+</nav>
+
+<div class="dashboard-container">
+
+  <h2>🏆 Leaderboard</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Rank</th>
+        <th>Name</th>
+        <th>Score</th>
+      </tr>
+    </thead>
+    <tbody id="leaderboardTable"></tbody>
+  </table>
+
+</div>
+
+<script>
+  const leaderboard = JSON.parse(localStorage.getItem("leaderboard")) || [];
+
+  leaderboard.sort((a,b) => b.score - a.score);
+
+  const table = document.getElementById("leaderboardTable");
+
+  leaderboard.forEach((entry, index) => {
+    let medal = "";
+    if(index === 0) medal = "🥇";
+    else if(index === 1) medal = "🥈";
+    else if(index === 2) medal = "🥉";
+
+    const row = `
+      <tr>
+        <td>${index + 1} ${medal}</td>
+        <td>${entry.name}</td>
+        <td>${entry.score}</td>
+      </tr>
+    `;
+    table.innerHTML += row;
+  });
+</script>
+
+</body>
+</html>
