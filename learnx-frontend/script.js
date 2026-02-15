@@ -31,13 +31,11 @@ const questions = [
   }
 ];
 
-// ================= VARIABLES =================
 let currentQuestion = 0;
 let score = 0;
 let userName = "";
 let answered = false;
 
-// ================= ELEMENTS =================
 const startBtn = document.getElementById("startBtn");
 const usernameInput = document.getElementById("username");
 
@@ -51,7 +49,6 @@ const nextBtn = document.getElementById("nextBtn");
 const resultText = document.getElementById("resultText");
 const progress = document.getElementById("progress");
 
-// ================= START QUIZ =================
 startBtn.addEventListener("click", () => {
   userName = usernameInput.value.trim();
 
@@ -66,7 +63,6 @@ startBtn.addEventListener("click", () => {
   loadQuestion();
 });
 
-// ================= LOAD QUESTION =================
 function loadQuestion() {
   answered = false;
 
@@ -82,11 +78,10 @@ function loadQuestion() {
   updateProgress();
 }
 
-// ================= OPTION CLICK =================
 optionButtons.forEach(button => {
   button.addEventListener("click", () => {
 
-    if (answered) return; // prevent multiple clicks
+    if (answered) return; 
     answered = true;
 
     const correctAnswer = questions[currentQuestion].answer;
@@ -97,7 +92,6 @@ optionButtons.forEach(button => {
     } else {
       button.classList.add("wrong");
 
-      // highlight correct answer
       optionButtons.forEach(btn => {
         if (btn.textContent === correctAnswer) {
           btn.classList.add("correct");
@@ -105,17 +99,14 @@ optionButtons.forEach(button => {
       });
     }
 
-    // disable all buttons
     optionButtons.forEach(btn => btn.disabled = true);
 
-    // auto move to next question after 1.5 sec
     setTimeout(() => {
       nextQuestion();
     }, 1500);
   });
 });
 
-// ================= NEXT QUESTION =================
 function nextQuestion() {
   currentQuestion++;
 
@@ -126,7 +117,6 @@ function nextQuestion() {
   }
 }
 
-// ================= SHOW RESULT =================
 function showResult() {
   quizScreen.style.display = "none";
   resultScreen.style.display = "block";
@@ -136,7 +126,6 @@ function showResult() {
     Your Score: ${score} / ${questions.length}
   `;
 
-  // Save to leaderboard
   let leaderboard = JSON.parse(localStorage.getItem("leaderboard")) || [];
 
   leaderboard.push({
@@ -144,11 +133,9 @@ function showResult() {
     score: score
   });
 
-  // Sort highest first
   leaderboard.sort((a, b) => b.score - a.score);
 
   localStorage.setItem("leaderboard", JSON.stringify(leaderboard));
-  // Also save detailed quiz results for teacher dashboard
   let quizResults = JSON.parse(localStorage.getItem("quizResults")) || [];
 
   quizResults.push({
@@ -162,7 +149,6 @@ function showResult() {
 
 }
 
-// ================= PROGRESS BAR =================
 function updateProgress() {
   const percent = (currentQuestion / questions.length) * 100;
   progress.style.width = percent + "%";
