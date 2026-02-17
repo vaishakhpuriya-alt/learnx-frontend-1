@@ -63,5 +63,4 @@ http://localhost:5000
 
 👨‍💻 Developer
 
-Backend Lead: Vaishakh
 GitHub: https://github.com/vaishakhpuriya-alt
